@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var manageView = ViewManager
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if !manageView.signed_in {
+            if !manageView.signing_up {
+                welcomePage()
+            }
+            else if !manageView.second_registrationPage {
+                Registration1()
+            }
+            else {
+                if !manageView.end_sign_up {
+                    end()
+                }
+                else {
+                    registration2()
+                }
+            }
         }
-        .padding()
+        else {
+            HomePage()
+        }
     }
 }
 
