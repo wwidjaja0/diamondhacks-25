@@ -12,7 +12,9 @@ struct end: View {
     ZStack() {
         //Button to next page
         Button(action: {
-            print("Go to app")
+            DispatchQueue.main.async {
+                ViewManager.signed_in = true
+            }
         }) {
             Text("Continue to App")
                 .font(Font.custom("Inter", size: 16).weight(.medium))
