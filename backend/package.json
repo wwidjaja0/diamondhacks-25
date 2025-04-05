@@ -1,0 +1,14 @@
+{
+  "name": "treasure",
+  "version": "1.0.0",
+  "description": "A gamified life skills education platform that uses scrollable social-like content, adaptive AI stories, mascot interaction, and streaks. Posts could have a side game running like Minecraft parkour for dopamine with real-world incentives to keep going.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
