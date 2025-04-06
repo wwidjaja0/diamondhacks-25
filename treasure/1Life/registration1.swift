@@ -115,7 +115,7 @@ struct Registration1: View {
               .foregroundColor(Color(red: 0.34, green: 0.35, blue: 0.35))
           }
           HStack(spacing: 4) {
-              TextField("Password", text: $password)
+              SecureField("Password", text: $password)
                 .font(Font.custom("Inter", size: 14).weight(.medium))
                 .lineSpacing(17.50)
                 .foregroundColor(Color(red: 0.34, green: 0.35, blue: 0.35))

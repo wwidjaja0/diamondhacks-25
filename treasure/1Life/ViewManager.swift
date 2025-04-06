@@ -26,6 +26,15 @@ class MyViewManager: NSObject, ObservableObject {
         DispatchQueue.main.async {
             self.signing_up = true
         }
+        InterfaceAPI.getVideoMixes(completion: { data in
+            guard let data = data else { return }
+            videoMix = Array(data.dropFirst(2))
+            self.currentVids = videoMix
+        })
+        InterfaceAPI.getVideoMixByCat(cat: "cooking", completion: { data in
+            guard let data = data else { return }
+            cookingVids = data
+        })
     }
     
     func nextRegistrationPage() {
@@ -38,15 +47,6 @@ class MyViewManager: NSObject, ObservableObject {
         DispatchQueue.main.async {
             self.end_sign_up = true
         }
-        InterfaceAPI.getVideoMixes(completion: { data in
-            guard let data = data else { return }
-            videoMix = Array(data.dropFirst(2))
-            self.currentVids = videoMix
-        })
-        InterfaceAPI.getVideoMixByCat(cat: "cooking", completion: { data in
-            guard let data = data else { return }
-            cookingVids = data
-        })
     }
     
     func startDoomScrolling(from: String) {
