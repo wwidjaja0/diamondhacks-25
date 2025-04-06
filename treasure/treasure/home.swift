@@ -18,13 +18,27 @@ struct HomePage: View {
         ZStack {
             ScrollView(.vertical) {
                 VStack(alignment: .leading, spacing: 24) {
+                    // Username message and profile image
+                    HStack() {
+                        // Profile image from URL (placeholder used for now)
+                        AsyncImage(url: URL(string: "https://media.discordapp.net/attachments/1353748421340823602/1358332761043238932/image.jpg?ex=67f37576&is=67f223f6&hm=e0ba5033a793bc1fb449ca6dbfd081cf5809ff7614b6a4ad80d7dc3fad662b45&=&format=webp&width=856&height=856")) { image in image
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 100, height: 100)
+                        } placeholder: {
+                                Color.gray
+                                .frame(width: 80, height: 80)
+                                .clipShape(Circle())
+                        }
+                        
+                        // Title
+                        Text("1Life")
+                            .font(Font.custom("Cochin", size: 40).weight(.semibold))
+                            .foregroundColor(Color(red: 0.21, green: 0.22, blue: 0.22))
+                            .padding(.top, 10)
+                    }
                     
-                    // Title
-                    Text("1Life")
-                        .font(Font.custom("Cochin", size: 40).weight(.semibold))
-                        .foregroundColor(Color(red: 0.21, green: 0.22, blue: 0.22))
-                        .padding(.top, 10)
-                        .padding(.horizontal)
+                    
                     
                     // Separator
                     Rectangle()
