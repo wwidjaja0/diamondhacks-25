@@ -11,7 +11,7 @@ struct HomePage: View {
     @State private var selectedTab: Tab = .home // Track the selected tab
     
     enum Tab {
-        case home, profile, search
+        case home, profile, search, post
     }
     
     var body: some View {
@@ -124,56 +124,56 @@ struct HomePage: View {
             // Bottom Navigation Bar
             VStack {
                 Spacer() // Push bar to bottom
-                HStack{
-                    // Home Tab
-                    
+                HStack {
+                    Spacer()
                     Button(action: {
                         selectedTab = .home
                     }) {
                         VStack {
                             Image(systemName: "house.fill")
-                                .foregroundColor(selectedTab == .home ? .black : .gray)
                             Text("Home")
                                 .font(.caption)
-                                .foregroundColor(selectedTab == .home ? .black : .gray)
                         }
-                        .padding(.horizontal, 40)
+                        .foregroundColor(selectedTab == .home ? .black : .gray)
                     }
                     Spacer()
-                                    
-                    // Search Tab
+                    Button(action: {
+                        selectedTab = .post
+                    }) {
+                        VStack {
+                            Image(systemName: "plus.circle.fill")
+                            Text("Post")
+                                .font(.caption)
+                        }
+                        .foregroundColor(selectedTab == .post ? .black : .gray)
+                    }
+                    Spacer()
                     Button(action: {
                         selectedTab = .search
                     }) {
                         VStack {
-                        Image(systemName: "magnifyingglass")
-                                .foregroundColor(selectedTab == .search ? .black : .gray)
-                        Text("Search")
-                            .font(.caption)
-                            .foregroundColor(selectedTab == .search ? .black : .gray)
+                            Image(systemName: "magnifyingglass")
+                            Text("Search")
+                                .font(.caption)
                         }
-                        .padding()
+                        .foregroundColor(selectedTab == .search ? .black : .gray)
                     }
-                            
                     Spacer()
-                    
-                    // Profile Tab
                     Button(action: {
                         selectedTab = .profile
                     }) {
                         VStack {
                             Image(systemName: "person.fill")
-                                .foregroundColor(selectedTab == .profile ? .black : .gray)
                             Text("Profile")
                                 .font(.caption)
-                                .foregroundColor(selectedTab == .profile ? .black : .gray)
                         }
-                        .padding(.horizontal, 40)
+                        .foregroundColor(selectedTab == .profile ? .black : .gray)
                     }
+                    Spacer()
                 }
-                .frame(height: 70)
+                .padding()
                 .background(Color.white)
-                .shadow(radius: 10)
+                .shadow(radius: 5)
             }
         }
     }
