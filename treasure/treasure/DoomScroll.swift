@@ -25,17 +25,17 @@ struct DoomScroll: View {
                 Spacer()
 
                 Text(videoMetadata.caption)
-                    .font(Font.custom("Lora", size: 32).weight(.semibold))
-                    .lineSpacing(40)
+                    .font(Font.custom("Cochin", size: 32).weight(.semibold))
+                    .lineSpacing(10)
                     .foregroundColor(.white)
 
                 Text(videoMetadata.author)
-                    .font(Font.custom("Inter", size: 20))
-                    .lineSpacing(30)
+                    .font(Font.custom("Cochin", size: 20))
+                    .lineSpacing(10)
                     .foregroundColor(.white)
             }
-            .padding(.bottom, 60)
-            .padding(.trailing, 200)
+            .padding(.bottom, 50)
+            .padding(.trailing, 100)
         }
         .background(Color.black)
         .onAppear {
@@ -49,6 +49,7 @@ struct DoomScroll: View {
         }
     }
 }
+
 
 struct VideoPlayerView: UIViewRepresentable {
     let player: AVPlayer
