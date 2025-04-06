@@ -34,9 +34,9 @@ struct Search: View {
             ("Clean a House", "https://plus.unsplash.com/premium_photo-1678304224523-d25b4117558f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNsZWFuaW5nfGVufDB8fDB8fHww", "HygieneHero"),
         ],
         "Taxes": [
-            ("Filing", "https://images.unsplash.com/photo-1528712306091-ed0763094c98?q=80&w=3140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "TaxExpert1"),
-            ("Refunds", "https://images.unsplash.com/photo-1528712306091-ed0763094c98?q=80&w=3140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "RefundKing"),
-            ("401K", "https://images.unsplash.com/photo-1528712306091-ed0763094c98?q=80&w=3140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "TaxGuru99"),
+            ("Filing", "https://plus.unsplash.com/premium_photo-1678139620960-5d00a6d7bb81?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGF4ZXN8ZW58MHx8MHx8fDA%3D", "TaxExpert1"),
+            ("Refunds", "https://images.unsplash.com/photo-1643321610692-719deb378a33?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hhcml0eSUyMHdvcmt8ZW58MHx8MHx8fDA%3D", "RefundKing"),
+            ("401K", "https://plus.unsplash.com/premium_photo-1680363254554-d1c63ad8d33d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fDQwMWt8ZW58MHx8MHx8fDA%3D", "TaxGuru99"),
         ],
         "Budgeting": [
             ("Saving Tips", "https://images.unsplash.com/photo-1528712306091-ed0763094c98?q=80&w=3140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "MoneyMaven"),
@@ -51,16 +51,16 @@ struct Search: View {
     ]
     
     let scrollData: [String: [(title: String, imageURL: String)]] = [
-        "Cooking": [
+        "Parse1": [
             ("Taxes", "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZpbGluZyUyMHRheGVzfGVufDB8fDB8fHww"),
-            ("Chopping", "https://images.unsplash.com/photo-1546552916-985b466ffbec?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
-            ("Boiling Water", "https://images.unsplash.com/photo-1585164422792-a2abebec33bf?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
-            ("Measuring", "https://images.unsplash.com/photo-1601058268499-e52658b8bb88?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FycGVudHJ5fGVufDB8fDB8fHww"),
-            ("Nail Recs", "https://images.unsplash.com/photo-1593307315564-c96172dc89dc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNhcnBlbnRyeXxlbnwwfHwwfHx8MA%3D%3D"),
-            ("Best Wood", "https://images.unsplash.com/photo-1520025617835-c638cd05bd8b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGNhcnBlbnRyeXxlbnwwfHwwfHx8MA%3D%3D"),
-            ("HowTo Curly Hair", "https://plus.unsplash.com/premium_photo-1729291142531-5e04bd44f4cb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2FzaGluZyUyMGN1cmx5JTIwaGFpcnxlbnwwfHwwfHx8MA%3D%3D"),
-            ("Flu Hacks", "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWVkaWNpbmV8ZW58MHx8MHx8fDA%3D"),
-            ("Clean a House", "https://plus.unsplash.com/premium_photo-1678304224523-d25b4117558f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNsZWFuaW5nfGVufDB8fDB8fHww")
+            ("Traveling", "https://images.unsplash.com/photo-1542909356-08e5625abea7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dHJhdmVsaW5nJTIwbWFwfGVufDB8fDB8fHww"),
+            ("ThankYou", "https://images.unsplash.com/photo-1554830072-52d78d0d4c18?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRoYW5rJTIweW91JTIwbm90ZXxlbnwwfHwwfHx8MA%3D%3D"),
+            ("Budgeting", "https://plus.unsplash.com/premium_photo-1679496829145-b8407d044a68?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YnVkZ2V0aW5nfGVufDB8fDB8fHww"),
+            ("Engine", "https://images.unsplash.com/photo-1717068341709-df1e2ec06ff8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhciUyMGVuZ2luZXxlbnwwfHwwfHx8MA%3D%3D"),
+            ("Traveling2", "https://images.unsplash.com/photo-1528543606781-2f6e6857f318?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bGlmZXxlbnwwfHwwfHx8MA%3D%3D"),
+            ("Civics", "https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9saXRpY3N8ZW58MHx8MHx8fDA%3D"),
+            ("SuitAndTie", "https://images.unsplash.com/photo-1606216769783-a7dbe227a17f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdlbGwlMjBkcmVzc2VkfGVufDB8fDB8fHww"),
+            ("HomeRenovations", "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2UlMjBwYWludGluZ3xlbnwwfHwwfHx8MA%3D%3D")
         ]
     ]
 
@@ -169,6 +169,13 @@ struct Search: View {
                                     .padding(.horizontal)
                             }
                             
+                            // Separator
+                            Rectangle()
+                                .frame(height: 6)
+                                .foregroundColor(Color(red: 0.82, green: 0.83, blue: 0.83))
+                                .frame(maxWidth: .infinity)
+                            
+                            // More Reels
                             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                                 ForEach(scrollData.flatMap { $0.value }, id: \.title) { item in
                                     VStack(alignment: .leading) {

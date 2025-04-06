@@ -22,7 +22,7 @@ struct Profile: View {
                 VStack(alignment: .leading, spacing: 24) {
                     // Title
                     Text("Profile")
-                        .font(Font.custom("Cochin", size: 30).weight(.semibold))
+                        .font(Font.custom("Cochin", size: 40).weight(.semibold))
                         .foregroundColor(Color(red: 0.21, green: 0.22, blue: 0.22))
                         .padding(.top, 10)
                         .padding(.horizontal)
@@ -75,7 +75,7 @@ struct Profile: View {
                     }
                     .padding(.horizontal)
                     
-                    // MARK: - Interests Placeholder Section
+                    // Interests
                     VStack(spacing: 8) {
                         Image(systemName: "sparkles")
                             .resizable()
@@ -87,14 +87,48 @@ struct Profile: View {
                             .font(Font.custom("Cochin", size: 20).weight(.semibold))
                             .foregroundColor(.black)
                         
-                        Text("You don't have any learning interests listed. Tell us what you want to learn, and we'll recommend relevant reels to you.")
+                        Text("Tell us what you want to learn, and we'll recommend relevant reels to you.")
                             .font(.system(size: 14))
                             .foregroundColor(.gray)
+                        
+                        //Chosen Interests
+                        HStack {
+                            VStack(alignment: .leading, spacing: 8) {
+                                Button(action: {
+                                    // action for Cooking (remove)
+                                }) {
+                                    Text("-  Cooking")
+                                        .font(.system(size: 14, weight: .regular))
+                                        .foregroundColor(.white)
+                                        .padding(.vertical, 10)
+                                        .padding(.horizontal, 20)
+                                        .background(.gray)
+                                        .cornerRadius(8)
+                                }
+
+                                Button(action: {
+                                    // action for General Life Skills (remove)
+                                }) {
+                                    Text("-  General Life Skills")
+                                        .font(.system(size: 14, weight: .regular))
+                                        .foregroundColor(.white)
+                                        .padding(.vertical, 10)
+                                        .padding(.horizontal, 20)
+                                        .background(.gray)
+                                        .cornerRadius(8)
+                                }
+                            }
+                            Spacer() // pushes VStack all the way left
+                        }
+
+
+
+                        Spacer(minLength: 30)
                         
                         Button(action: {
                             // add interest action
                         }) {
-                            Text("+ Add my learning interests")
+                            Text("+ Add more learning interests")
                                 .font(.system(size: 14, weight: .regular))
                                 .foregroundColor(.black)
                                 .padding(.vertical, 10)
@@ -147,7 +181,7 @@ struct Profile: View {
                     }
                     
                     
-                    // MARK: - Account Section
+                    // Account
                     HStack {
                         Text("Account")
                             .font(Font.custom("Cochin", size: 24).weight(.semibold))
