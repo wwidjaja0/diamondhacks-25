@@ -11,7 +11,7 @@ struct registration2: View {
 
     @State private var selectedOptions: Set<String> = []
 
-    let options = ["Cooking", "Hygiene", "Nutrition", "General Life Skills"]
+    let options = ["Cooking", "Laundry", "Nutrition", "General Life Skills"]
     
     var body: some View {
       ZStack {
