@@ -1,7 +1,7 @@
 {
 	"name": "treasure",
 	"version": "1.0.0",
-	"description": "A gamified life skills education platform that uses scrollable social-like content, adaptive AI stories, mascot interaction, and streaks. Posts could have a side game running like Minecraft parkour for dopamine with real-world incentives to keep going.",
+	"description": "A life-skills social-media learning platform that features scrollable content, responsive feedback, and streaks. We provide incentives to users for inviting their friends and family to the app by unlocking new features instead of being locked behind a paid subscription.",
 	"main": "server.ts",
 	"scripts": {
 		"start": "npx tsx ./src/server.ts",
