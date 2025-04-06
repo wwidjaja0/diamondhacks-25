@@ -4,7 +4,7 @@
 
 ## Inspiration
 
-In many countries, life skills like filing taxes, cooking, and doing house chores are taught in school curriculums, but the U.S. education system often leaves out this essential education. Meanwhile, younger generations are growing up in a fast-paced digital world and consequently, have short attention spans and consume content in short form(TikTok and Instagram Reels). **How might we motivate young adults to learn life skills in a way that engages them in this fast-paced digital world?**
+In several countries, life skills like filing taxes, cooking, and doing house chores are taught in school curriculums, but the U.S. education system often leaves out this essential education. Meanwhile, younger generations are growing up in a fast-paced digital world and consequently, have short attention spans and consume content in short form(TikTok and Instagram Reels). **How might we motivate young adults to learn life skills in a way that engages them in this fast-paced digital world?**
 
 ## What it does
 
