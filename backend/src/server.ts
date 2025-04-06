@@ -1,4 +1,3 @@
-import "module-alias/register";
 import mongoose from "mongoose";
 import app from "./app";
 import env from "./util/validateEnv";

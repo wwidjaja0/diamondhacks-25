@@ -7,7 +7,6 @@
 		"start": "npx tsx ./src/server.ts",
 		"build": "tsc"
 	},
-	"type": "module",
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
