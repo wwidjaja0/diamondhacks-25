@@ -4,7 +4,7 @@
 	"description": "A gamified life skills education platform that uses scrollable social-like content, adaptive AI stories, mascot interaction, and streaks. Posts could have a side game running like Minecraft parkour for dopamine with real-world incentives to keep going.",
 	"main": "server.ts",
 	"scripts": {
-		"start": "npx tsx .\\src\\server.ts",
+		"start": "npx tsx ./src/server.ts",
 		"build": "tsc"
 	},
 	"type": "module",
