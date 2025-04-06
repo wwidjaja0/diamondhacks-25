@@ -18,26 +18,25 @@ struct registration2: View {
         VStack(spacing: 0) {
           // Top-aligned content
           VStack(alignment: .leading, spacing: 40) {
-            // Learning Goals and Exit
-            HStack {
-              Text("Learning Goals")
-                .font(Font.custom("Inter", size: 14).weight(.semibold))
-                .lineSpacing(17.50)
-                .foregroundColor(Color(red: 0.21, green: 0.22, blue: 0.22))
-              Spacer()
-              Text("Exit")
-                .font(Font.custom("Inter", size: 14).weight(.medium))
-                .lineSpacing(17.50)
-                .foregroundColor(Color(red: 0.69, green: 0.70, blue: 0.70))
-            }
-            .padding(.top, 48)
-            .padding(.horizontal, 24)
+              
+              VStack(alignment: .center, spacing: 10) {
+                HStack {
+                  Spacer()
+                  HStack(spacing: 12) {
+                    Text("Learning Goals")
+                      .font(Font.custom("Inter", size: 14).weight(.semibold))
+                      .foregroundColor(Color(red: 0.21, green: 0.22, blue: 0.22))
+                    
+                    Text("Exit")
+                      .font(Font.custom("Inter", size: 14).weight(.medium))
+                      .foregroundColor(Color(red: 0.69, green: 0.70, blue: 0.70))
+                  }
+                  Spacer()
+                }
+                .padding(.top, 48)
+              }
 
-            // Black Bar
-            Rectangle()
-              .frame(width: 97.5, height: 4)
-              .foregroundColor(Color(red: 0.12, green: 0.13, blue: 0.14))
-              .padding(.leading, 24)
+
 
             // Heading and subtext
               VStack(spacing: 24) {

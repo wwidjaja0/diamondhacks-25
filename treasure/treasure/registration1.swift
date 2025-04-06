@@ -8,8 +8,8 @@ struct Registration1: View {
     
   var body: some View {
     ZStack() {
-      VStack(spacing: 23) {
-        VStack(spacing: 40) {
+      VStack(spacing:16) {
+        VStack(spacing: 24) {
           VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 16) {
               HStack(spacing: 12) {
@@ -26,9 +26,9 @@ struct Registration1: View {
             .padding(EdgeInsets(top: 48, leading: 24, bottom: 12, trailing: 24))
             .background(.white)
           }
-          VStack(alignment: .leading, spacing: 12) {
+          VStack(alignment: .leading, spacing: 8) {
             Text("Add a photo:")
-              .font(Font.custom("Lora", size: 24).weight(.semibold))
+              .font(Font.custom("Cochin", size: 30).weight(.semibold))
               .lineSpacing(30)
               .foregroundColor(Color(red: 0.21, green: 0.22, blue: 0.22))
           }
@@ -45,9 +45,12 @@ struct Registration1: View {
                         .clipped()
                 } else {
                     // Placeholder when no image is selected
-                    Circle()
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .scaledToFit()
                         .frame(width: 200, height: 200)
-                        .foregroundColor(.gray)
+                        .clipShape(Circle())
+                        .overlay(Circle().stroke(Color.white, lineWidth: 2))
                 }
             }
           }
@@ -144,37 +147,50 @@ struct Registration1: View {
         }
         .frame(width: 320)
       }
-      .padding(EdgeInsets(top: 0, leading: 0, bottom: 56, trailing: 0))
+      .padding(.bottom, 32)
       .frame(width: 390, height: 845)
-      .offset(x: 0, y: 0.50)
-      HStack(spacing: 12) {
-        HStack(spacing: 8) {
-          Text("Back")
-            .font(Font.custom("Inter", size: 14).weight(.medium))
-            .lineSpacing(17.50)
-            .foregroundColor(Color(red: 0.69, green: 0.70, blue: 0.70))
-        }
-        .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
-        .frame(height: 48)
-        .background(.white)
-        .cornerRadius(4)
-        HStack(spacing: 8) {
-            Button("Continue") {
-                ViewManager.nextRegistrationPage()
+      .offset(x: 0, y: -70)
+        
+        // Bottom Buttons
+        HStack(spacing: 12) {
+            Button(action: {
+                print("Back tapped")
+            }) {
+                Text("Back")
+                    .font(Font.custom("Inter", size: 14).weight(.medium))
+                    .foregroundColor(Color(red: 0.69, green: 0.70, blue: 0.70))
+                    .padding(.horizontal, 16)
+                    .frame(height: 48)
+                    .background(Color.white)
+                    .cornerRadius(4)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 4)
+                        .stroke(Color(red: 0.82, green: 0.83, blue: 0.83), lineWidth: 0.5)
+                    )
             }
-            .font(Font.custom("Inter", size: 16).weight(.medium))
-            .lineSpacing(20)
-            .foregroundColor(.white)
-          ZStack() {
+            
+            Spacer()
 
-          }
-          .frame(width: 20, height: 20)
+            Button(action: {
+                ViewManager.nextRegistrationPage()
+            }) {
+                HStack(spacing: 8) {
+                    Text("Continue")
+                        .font(Font.custom("Inter", size: 16).weight(.medium))
+                    Text("→")
+                        .font(.system(size: 16))
+                }
+                .foregroundColor(.white)
+                .padding(.horizontal, 16)
+                .frame(height: 48)
+                .background(Color(red: 0.21, green: 0.22, blue: 0.22))
+                .cornerRadius(6)
+            }
         }
-        .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
-        .frame(height: 48)
-        .background(Color(red: 0.21, green: 0.22, blue: 0.22))
-        .cornerRadius(6)
-      }
+        .padding(.horizontal, 24)
+        .padding(.bottom, 56)
+        
+        //erm extra padding?
       .padding(EdgeInsets(top: 12, leading: 24, bottom: 0, trailing: 24))
       .frame(width: 390)
       .background(.white)
