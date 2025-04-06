@@ -163,13 +163,13 @@ struct Search: View {
                 // Bottom Nav Bar
                 HStack {
                     Spacer()
-                    tabIcon("house.fill", title: "Home", isActive: selectedTab == .home) { selectedTab = .home }
+                    tabIcon("house.fill", title: "Home", isActive: selectedTab == .home) { selectedTab = .home; ViewManager.lastPage = "Home" }
                     Spacer()
                     tabIcon("plus.circle.fill", title: "Post", isActive: selectedTab == .post) { selectedTab = .post }
                     Spacer()
                     tabIcon("magnifyingglass", title: "Search", isActive: selectedTab == .search) { selectedTab = .search }
                     Spacer()
-                    tabIcon("person.fill", title: "Profile", isActive: selectedTab == .profile) { selectedTab = .profile }
+                    tabIcon("person.fill", title: "Profile", isActive: selectedTab == .profile) { selectedTab = .profile; ViewManager.lastPage = "Profile" }
                     Spacer()
                 }
                 .padding()

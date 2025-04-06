@@ -20,7 +20,7 @@ struct HomePage: View {
                 VStack(alignment: .leading, spacing: 24) {
                     
                     // Title
-                    Text("APP NAME HERE")
+                    Text("1Life")
                         .font(Font.custom("Cochin", size: 40).weight(.semibold))
                         .foregroundColor(Color(red: 0.21, green: 0.22, blue: 0.22))
                         .padding(.top, 10)
@@ -150,6 +150,7 @@ struct HomePage: View {
                     Spacer()
                     Button(action: {
                         selectedTab = .search
+                        ViewManager.lastPage = "Search"
                     }) {
                         VStack {
                             Image(systemName: "magnifyingglass")
@@ -161,6 +162,7 @@ struct HomePage: View {
                     Spacer()
                     Button(action: {
                         selectedTab = .profile
+                        ViewManager.lastPage = "Profile"
                     }) {
                         VStack {
                             Image(systemName: "person.fill")

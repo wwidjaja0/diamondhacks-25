@@ -39,8 +39,11 @@ struct ContentView: View {
                 if manageView.lastPage == "" || manageView.lastPage == "Home" {
                     HomePage()
                 }
-                else {
+                else if manageView.lastPage == "Search" {
                     Search()
+                }
+                else {
+                    Profile()
                 }
             }
             else {
