@@ -8,6 +8,22 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
 videoRouter.get(
+	"/cooking",
+	videoValidator.videoCookingValidator,
+	videoController.cooking
+);
+videoRouter.get(
+	"/laundry",
+	videoValidator.videoLaundryValidator,
+	videoController.laundry
+);
+videoRouter.get(
+	"/nutrition",
+	videoValidator.videoNutritionValidator,
+	videoController.cooking
+);
+
+videoRouter.get(
 	"/:id",
 	videoValidator.getVideovalidator,
 	videoController.getVideoById
@@ -27,10 +43,6 @@ videoRouter.delete(
 );
 
 videoRouter.get("/", videoController.getVideos);
-
-videoRouter.get("/cooking", videoController.cooking);
-videoRouter.get("/laundry", videoController.laundry);
-videoRouter.get("/nutrition", videoController.cooking);
 
 videoRouter.post(
 	"/",
