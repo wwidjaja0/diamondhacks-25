@@ -3,6 +3,7 @@
 //  treasure
 //
 //  Created by B Miyamoto on 4/5/25.
+//  Image credit to usplash
 //
 
 import SwiftUI
@@ -60,20 +61,27 @@ struct Profile: View {
                         
                         Spacer()
                         
-                        Image(systemName: "person.crop.circle.fill")
-                            .resizable()
-                            .frame(width: 80, height: 80)
-                            .foregroundColor(.gray)
+                        // Profile image from URL (placeholder used for now)
+                        AsyncImage(url: URL(string: "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHVydGxlfGVufDB8fDB8fHww")) { image in image
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 80, height: 80)
+                                .clipShape(Circle())
+                        } placeholder: {
+                                Color.gray
+                                .frame(width: 80, height: 80)
+                                .clipShape(Circle())
+                        }
                     }
                     .padding(.horizontal)
                     
                     // MARK: - Interests Placeholder Section
                     VStack(spacing: 8) {
                         Image(systemName: "sparkles")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 40, height: 40)
-                                .foregroundColor(.black)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.black)
                         
                         Text("What interests you!")
                             .font(Font.custom("Cochin", size: 20).weight(.semibold))
@@ -101,6 +109,44 @@ struct Profile: View {
                     .cornerRadius(12)
                     .padding(.horizontal)
                     
+                    VStack(spacing: 8) {
+                        VStack(alignment: .center, spacing: 16) {
+                            Text("Invite your friends!")
+                                .font(Font.custom("Cochin", size: 24).weight(.semibold))
+                                .lineSpacing(30)
+                                .foregroundColor(Color(red: 0.21, green: 0.22, blue: 0.22))
+                                .multilineTextAlignment(.center)
+                            
+                            Text("Have friends irl? Invite them to unlock new features:")
+                                .font(Font.custom("Inter", size: 14).weight(.medium))
+                                .lineSpacing(21)
+                                .foregroundColor(Color(red: 0.34, green: 0.35, blue: 0.35))
+                                .multilineTextAlignment(.center)
+                            
+                            ForEach(["Private Mode", "Posting Privileges", "Playback Speed", "Free Downloads", "Higher Video Quality"], id: \.self) { feature in
+                                FeatureRow(feature: feature)
+                            }
+                            
+                            HStack(spacing: 8) {
+                                Text("+    Invite Friends")
+                                    .font(Font.custom("Inter", size: 16).weight(.medium))
+                                    .lineSpacing(20)
+                                    .foregroundColor(Color(red: 0.21, green: 0.22, blue: 0.22))
+                            }
+                            .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+                            .frame(width: 280, height: 45)
+                            .background(.white)
+                            .cornerRadius(6)
+                            .padding(.top, 8)
+                        }
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color(red: 0.93, green: 0.95, blue: 0.90))
+                        .cornerRadius(12)
+                        .padding(.horizontal)
+                    }
+                    
+                    
                     // MARK: - Account Section
                     HStack {
                         Text("Account")
@@ -117,17 +163,15 @@ struct Profile: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 16) {
-                            ForYou(category: "Completed Series")
-                            ForYou(category: "In Progress")
-                            ForYou(category: "Friends")
+                            ForYou(category: "Completed Series", imageURL: "https://images.unsplash.com/photo-1522244451342-a41bf8a13d73?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z3JpbGxpbmd8ZW58MHx8MHx8fDA%3D")
+                            ForYou(category: "In Progress", imageURL: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHlwaW5nfGVufDB8fDB8fHww")
+                            ForYou(category: "Friends", imageURL: "https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZG9nfGVufDB8fDB8fHww")
                         }
                         .padding(.horizontal)
                     }
-                    
                 }
-                .padding(.vertical)
-                }
-                .padding(.vertical)
+                .padding(.top)
+                .padding(.bottom, 80)
             }
 
             // Bottom nav bar
@@ -135,7 +179,6 @@ struct Profile: View {
                 Spacer()
                 Button(action: {
                     selectedTab = .home
-                    ViewManager.lastPage = "Home"
                 }) {
                     VStack {
                         Image(systemName: "house.fill")
@@ -157,7 +200,6 @@ struct Profile: View {
                 }
                 Spacer()
                 Button(action: {
-                    ViewManager.lastPage = "Search"
                     selectedTab = .search
                 }) {
                     VStack {
@@ -184,29 +226,60 @@ struct Profile: View {
             .background(Color.white)
             .shadow(radius: 5)
         }
-
-    
-    struct ForYou: View {
-        var category: String
-        
-        var body: some View {
-            VStack(alignment: .leading, spacing: 8) {
-                Spacer()
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(category)
-                        .font(Font.custom("Inter", size: 14).weight(.bold))
-                }
-            }
-            .padding()
-            .frame(width: 120, height: 120)
-            .background(Color(red: 0.93, green: 0.95, blue: 0.90))
-            .cornerRadius(10)
-        }
     }
 }
 
+struct ForYou: View {
+    var category: String
+    var imageURL: String
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Spacer()
+            VStack(alignment: .leading, spacing: 4) {
+                Text(category)
+                    .font(Font.custom("Inter", size: 14).weight(.bold))
+                    .foregroundColor(.black)
+                    .zIndex(1)
+            }
+        }
+        .padding()
+        .frame(width: 120, height: 120)
+        .background(
+            AsyncImage(url: URL(string: imageURL)) { image in
+                image
+                    .resizable()
+                    .scaledToFill()
+                    .opacity(0.5)
+                    .cornerRadius(10)
+            } placeholder: {
+                Color.gray
+                    .cornerRadius(10)
+            }
+        )
+        .cornerRadius(10)
+    }
+}
+
+struct FeatureRow: View {
+    var feature: String
+    
+    var body: some View {
+        HStack(spacing: 16) {
+            Text(feature)
+                .font(Font.custom("Inter", size: 14))
+                .foregroundColor(Color(red: 0.21, green: 0.22, blue: 0.22))
+            Spacer()
+            Image(systemName: "checkmark.circle.fill")
+                .foregroundColor(Color(red: 0.71, green: 0.83, blue: 0.48))
+        }
+        .padding(EdgeInsets(top: 8, leading: 24, bottom: 8, trailing: 24))
+    }
+}
 
 // MARK: - Preview Provider
-#Preview {
-    Profile()
+struct Profile_Previews: PreviewProvider {
+    static var previews: some View {
+        Profile()
+    }
 }

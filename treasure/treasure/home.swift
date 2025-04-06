@@ -82,42 +82,45 @@ struct HomePage: View {
                 HStack(spacing: 16) {
                     FriendsActivity(
                         profileImage: Image(systemName: "person.circle.fill"),
-                        username: "Stephanie Chung",
+                        username: "DiamondHacks",
                         action: "completed this reels series.",
-                        completedReels: ["Reel 1", "Reel 2", "Reel 3", "Reel 4"]
+                        completedReels: ["https://plus.unsplash.com/premium_photo-1726837285699-3d9e8788e7c8?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://plus.unsplash.com/premium_photo-1692193552327-3458ef3817c0?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://plus.unsplash.com/premium_photo-1664372899525-d99a419fd21a?q=80&w=3094&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1642075191572-9992f5f290c2?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
                     )
                     .padding(.horizontal)
                 }
                 
                 HStack(spacing: 16) {
                     FriendsActivity(
-                        profileImage: Image(systemName: "person.circle.fill"),
-                        username: "Stephanie Chung",
-                        action: "recently watched these reels.",
-                        completedReels: ["Reel 1", "Reel 2", "Reel 3", "Reel 4"]
+                        profileImage: Image(systemName: "star.circle.fill"),
+                        username: "stephanie",
+                        action: "completed this reels series.",
+                        completedReels: ["https://images.unsplash.com/photo-1707190981752-5aca6bb786db?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG93JTIwdG8lMjB0aWUlMjBhJTIwdGllfGVufDB8fDB8fHww", "https://plus.unsplash.com/premium_photo-1663126722936-dbaed23fdf7b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2xlYW4lMjBmaWx0cmF0aW9ufGVufDB8fDB8fHww", "https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyJTIwbWFpbnRlbmVuY2V8ZW58MHx8MHx8fDA%3D", "https://plus.unsplash.com/premium_photo-1678139487806-b32112def40f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGF4ZXN8ZW58MHx8MHx8fDA%3D"]
                     )
                     .padding(.horizontal)
                 }
                 
                 HStack(spacing: 16) {
                     FriendsActivity(
-                        profileImage: Image(systemName: "person.circle.fill"),
-                        username: "Stephanie Chung",
-                        action: "liked these reels.",
-                        completedReels: ["Reel 1", "Reel 2", "Reel 3", "Reel 4"]
+                        profileImage: Image(systemName: "heart.circle.fill"),
+                        username: "lukas",
+                        action: "completed this reels series.",
+                        completedReels: ["https://plus.unsplash.com/premium_photo-1663047910718-c8758a6785e9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGV0JTIwY2FyZXxlbnwwfHwwfHx8MA%3D%3D", "https://plus.unsplash.com/premium_photo-1663040477032-0cb4ee5402bc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGV0JTIwY2FyZXxlbnwwfHwwfHx8MA%3D%3D", "https://plus.unsplash.com/premium_photo-1665408511519-7a7c17cb6b93?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGxhbnQlMjBjYXJlfGVufDB8fDB8fHww", "https://images.unsplash.com/photo-1722411983889-a3a6321ecf8f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG91c2UlMjBjaG9yZXN8ZW58MHx8MHx8fDA%3D"]
                     )
                     .padding(.horizontal)
                 }
                 
                 HStack(spacing: 16) {
                     FriendsActivity(
-                        profileImage: Image(systemName: "person.circle.fill"),
-                        username: "Stephanie Chung",
-                        action: "recommended these reels.",
-                        completedReels: ["Reel 1", "Reel 2", "Reel 3", "Reel 4"]
+                        profileImage: Image(systemName: "moon.circle.fill"),
+                        username: "widjaja",
+                        action: "completed this reels series.",
+                        completedReels: ["https://images.unsplash.com/photo-1581622558663-b2e33377dfb2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG91c2UlMjBjaG9yZXN8ZW58MHx8MHx8fDA%3D", "https://plus.unsplash.com/premium_photo-1678697844527-a090ad16eb8b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG91c2UlMjBjaG9yZXN8ZW58MHx8MHx8fDA%3D", "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8am9iJTIwaW50ZXJ2aWV3fGVufDB8fDB8fHww", "https://images.unsplash.com/photo-1630527152680-500b5453fb04?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNldCUyMHRhYmxlfGVufDB8fDB8fHww"]
                     )
                     .padding(.horizontal)
                 }
+                
+                .padding(.top)
+                .padding(.bottom, 80)
             }
                 
                 
@@ -215,8 +218,8 @@ struct FriendsActivity: View {
     var profileImage: Image
     var username: String
     var action: String
-    var completedReels: [String]
-        
+    var completedReels: [String] // URLs of images
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             // Username message and profile image
@@ -236,19 +239,27 @@ struct FriendsActivity: View {
                     .padding(.trailing)
             }
             
-            // Horizontal scrollable rectangles (reels)
+            // Horizontal scrollable rectangles (reels with images)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
-                    ForEach(completedReels, id: \.self) { reel in
+                    ForEach(completedReels, id: \.self) { reelURL in
                         Rectangle()
                             .fill(Color.gray.opacity(0.2))
                             .frame(width: 120, height: 80)
                             .cornerRadius(8)
                             .overlay(
-                                Text(reel)
-                                    .font(Font.custom("Inter", size: 12).weight(.medium))
-                                    .foregroundColor(.black)
-                                    .padding(8)
+                                AsyncImage(url: URL(string: reelURL)) { image in
+                                    image
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 120, height: 80)
+                                        .cornerRadius(8)
+                                        .clipped()
+                                } placeholder: {
+                                    Color.gray.opacity(0.2) // Placeholder while loading
+                                        .frame(width: 120, height: 80)
+                                        .cornerRadius(8)
+                                }
                             )
                     }
                 }
@@ -261,9 +272,9 @@ struct FriendsActivity: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical)
         }
-        
     }
 }
+
 
 
 // MARK: - Preview Provider

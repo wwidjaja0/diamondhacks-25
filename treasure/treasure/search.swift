@@ -49,6 +49,20 @@ struct Search: View {
             ("Job Boards", "https://images.unsplash.com/photo-1528712306091-ed0763094c98?q=80&w=3140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "HireMeNow"),
         ]
     ]
+    
+    let scrollData: [String: [(title: String, imageURL: String)]] = [
+        "Cooking": [
+            ("Taxes", "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZpbGluZyUyMHRheGVzfGVufDB8fDB8fHww"),
+            ("Chopping", "https://images.unsplash.com/photo-1546552916-985b466ffbec?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
+            ("Boiling Water", "https://images.unsplash.com/photo-1585164422792-a2abebec33bf?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
+            ("Measuring", "https://images.unsplash.com/photo-1601058268499-e52658b8bb88?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FycGVudHJ5fGVufDB8fDB8fHww"),
+            ("Nail Recs", "https://images.unsplash.com/photo-1593307315564-c96172dc89dc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNhcnBlbnRyeXxlbnwwfHwwfHx8MA%3D%3D"),
+            ("Best Wood", "https://images.unsplash.com/photo-1520025617835-c638cd05bd8b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGNhcnBlbnRyeXxlbnwwfHwwfHx8MA%3D%3D"),
+            ("HowTo Curly Hair", "https://plus.unsplash.com/premium_photo-1729291142531-5e04bd44f4cb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2FzaGluZyUyMGN1cmx5JTIwaGFpcnxlbnwwfHwwfHx8MA%3D%3D"),
+            ("Flu Hacks", "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWVkaWNpbmV8ZW58MHx8MHx8fDA%3D"),
+            ("Clean a House", "https://plus.unsplash.com/premium_photo-1678304224523-d25b4117558f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNsZWFuaW5nfGVufDB8fDB8fHww")
+        ]
+    ]
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -154,6 +168,26 @@ struct Search: View {
                                     .cornerRadius(10)
                                     .padding(.horizontal)
                             }
+                            
+                            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
+                                ForEach(scrollData.flatMap { $0.value }, id: \.title) { item in
+                                    VStack(alignment: .leading) {
+                                        AsyncImage(url: URL(string: item.imageURL)) { image in
+                                            image
+                                                .resizable()
+                                                .scaledToFill()
+                                        } placeholder: {
+                                            Color.gray.opacity(0.3)
+                                        }
+                                        .frame(height: 230)
+                                        .clipped()
+                                        .cornerRadius(12)
+                                    }
+                                }
+                            }
+                            .padding(.horizontal)
+
+                                             
                         }
                     }
                     .padding(.top)
