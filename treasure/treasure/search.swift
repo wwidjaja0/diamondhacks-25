@@ -157,7 +157,7 @@ struct Search: View {
 
                             // Button
                             Button(action: {
-                                print("Viewing \(selectedInterest) reels")
+                                ViewManager.startDoomScrolling(from: "Search")
                             }) {
                                 Text("View \(selectedInterest) Reels")
                                     .font(.system(size: 16, weight: .bold))

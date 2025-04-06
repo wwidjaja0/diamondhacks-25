@@ -25,6 +25,11 @@ struct VideoMetaData: Decodable {
     enum CodingKeys: String, CodingKey {
         case _id, videoKey, likeCount, caption, author, createdAt, updatedAt, __v, video, id
     }
+    
+    func makeURL() -> URL? {
+        guard let videoURL = URL(string: video) else { return nil }
+        return videoURL
+    }
 }
 
 class MyInterfaceAPI {
@@ -55,13 +60,22 @@ class MyInterfaceAPI {
         task.resume()
     }
     
-    func getVideoMixes() -> [VideoMetaData]? {
+    func getVideoMixes(completion: @escaping ([VideoMetaData]?) -> Void) {
         process_get_request(endpoint: "api/videos", completion: { data in
             guard let data = data else { return }
             if let jsons = try? JSONDecoder().decode([VideoMetaData].self, from: data) {
-                print(jsons)
+                completion(jsons)
             }
         })
-        return nil
+    }
+    
+    func getVideoMixByCat(cat: String, completion: @escaping ([VideoMetaData]?) -> Void) {
+        process_get_request(endpoint: "api/videos/\(cat)", completion: { data in
+            guard let data = data else { return }
+            if let jsons = try? JSONDecoder().decode([VideoMetaData].self, from: data) {
+                print(jsons.count)
+                completion(jsons)
+            }
+        })
     }
 }

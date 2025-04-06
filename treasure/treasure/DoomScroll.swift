@@ -2,7 +2,7 @@ import SwiftUI
 import AVFoundation
 
 struct DoomScroll: View {
-    let videoURL: URL
+    let videoMetadata: VideoMetaData
     @State private var player: AVPlayer?
 
     var body: some View {
@@ -24,12 +24,12 @@ struct DoomScroll: View {
 
                 Spacer()
 
-                Text("[Video Title]")
+                Text(videoMetadata.caption)
                     .font(Font.custom("Lora", size: 32).weight(.semibold))
                     .lineSpacing(40)
                     .foregroundColor(.white)
 
-                Text("@[Username]")
+                Text(videoMetadata.author)
                     .font(Font.custom("Inter", size: 20))
                     .lineSpacing(30)
                     .foregroundColor(.white)
@@ -39,6 +39,7 @@ struct DoomScroll: View {
         }
         .background(Color.black)
         .onAppear {
+            guard let videoURL = videoMetadata.makeURL() else { return }
             let p = createLoopingPlayer(url: videoURL)
             player = p
             p.play()

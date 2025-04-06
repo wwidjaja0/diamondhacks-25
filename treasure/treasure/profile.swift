@@ -213,6 +213,7 @@ struct Profile: View {
                 Spacer()
                 Button(action: {
                     selectedTab = .home
+                    ViewManager.lastPage = "Home"
                 }) {
                     VStack {
                         Image(systemName: "house.fill")
@@ -235,6 +236,7 @@ struct Profile: View {
                 Spacer()
                 Button(action: {
                     selectedTab = .search
+                    ViewManager.lastPage = "Search"
                 }) {
                     VStack {
                         Image(systemName: "magnifyingglass")

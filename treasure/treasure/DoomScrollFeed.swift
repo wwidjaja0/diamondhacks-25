@@ -1,14 +1,14 @@
 import SwiftUI
 
 struct DoomScrollFeed: View {
-    let videoURLs: [URL]
+    let videoMetaDatas: [VideoMetaData]
     @State private var currentIndex: Int = 0
     
     var body: some View {
         GeometryReader { geometry in
             TabView(selection: $currentIndex) {
-                ForEach(0..<videoURLs.count, id: \.self) { index in
-                    DoomScroll(videoURL: videoURLs[index])
+                ForEach(0..<videoMetaDatas.count, id: \.self) { index in
+                    DoomScroll(videoMetadata: videoMetaDatas[index])
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .tag(index)
                         .rotationEffect(.degrees(-90)) // Rotate content
