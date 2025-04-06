@@ -37,3 +37,7 @@ export const updateVideoValidator = [
 ];
 
 export const deleteVideoValidator = [validateIdParam];
+
+export const videoCookingValidator = [];
+export const videoLaundryValidator = [];
+export const videoNutritionValidator = [];
