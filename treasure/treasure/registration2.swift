@@ -114,7 +114,7 @@ struct registration2: View {
                 Spacer()
 
                 Button(action: {
-                    print("Continue tapped with selected options: \(selectedOptions)")
+                    ViewManager.endSignUp()
                 }) {
                     HStack(spacing: 8) {
                         Text("Continue")

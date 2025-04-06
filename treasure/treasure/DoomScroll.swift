@@ -16,7 +16,7 @@ struct DoomScroll: View {
 
             VStack(alignment: .leading, spacing: 16) {
                 Button("", systemImage: "arrowshape.backward") {
-                    print("Back tapped")
+                    ViewManager.endDoomScrolling()
                 }
                 .font(.system(size: 32))
                 .padding(.top, 60)

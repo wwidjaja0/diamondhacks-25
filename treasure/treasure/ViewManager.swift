@@ -15,6 +15,8 @@ class MyViewManager: NSObject, ObservableObject {
     @Published var second_registrationPage: Bool = false
     @Published var username: String = ""
     @Published var end_sign_up: Bool = false
+    @Published var doomScrolling: Bool = false
+    @Published var lastPage: String = ""
     
     
     func startSignUp() {
@@ -31,8 +33,20 @@ class MyViewManager: NSObject, ObservableObject {
     
     func endSignUp() {
         DispatchQueue.main.async {
-            self.second_registrationPage = false
             self.end_sign_up = true
+        }
+    }
+    
+    func startDoomScrolling(from: String) {
+        DispatchQueue.main.async {
+            self.lastPage = from
+            self.doomScrolling = true
+        }
+    }
+    
+    func endDoomScrolling() {
+        DispatchQueue.main.async {
+            self.doomScrolling = false
         }
     }
 }

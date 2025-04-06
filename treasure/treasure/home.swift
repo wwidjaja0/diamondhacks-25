@@ -186,20 +186,26 @@ struct ContentCard: View {
     var username: String
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Spacer()
-            VStack(alignment: .leading, spacing: 4) {
-                Text(title)
-                    .font(Font.custom("Inter", size: 14).weight(.semibold))
-                Text("@\(username)")
-                    .font(Font.custom("Inter", size: 12))
-                    .foregroundColor(.gray)
+        ZStack {
+            Button(action: {
+                ViewManager.startDoomScrolling(from: "Home")
+            }) {
+                VStack(alignment: .leading, spacing: 8) {
+                    Spacer()
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(title)
+                            .font(Font.custom("Inter", size: 14).weight(.semibold))
+                        Text("@\(username)")
+                            .font(Font.custom("Inter", size: 12))
+                            .foregroundColor(.gray)
+                    }
+                }
+                .padding()
+                .frame(width: 206, height: 300)
+                .background(Color(red: 0.85, green: 0.89, blue: 0.76))
+                .cornerRadius(10)
             }
         }
-        .padding()
-        .frame(width: 206, height: 300)
-        .background(Color(red: 0.85, green: 0.89, blue: 0.76))
-        .cornerRadius(10)
     }
 }
 
