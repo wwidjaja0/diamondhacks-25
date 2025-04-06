@@ -35,6 +35,7 @@ class MyViewManager: NSObject, ObservableObject {
         DispatchQueue.main.async {
             self.end_sign_up = true
         }
+        InterfaceAPI.getVideoMixes()
     }
     
     func startDoomScrolling(from: String) {
