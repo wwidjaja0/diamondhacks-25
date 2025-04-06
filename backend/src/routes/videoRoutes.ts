@@ -28,6 +28,10 @@ videoRouter.delete(
 
 videoRouter.get("/", videoController.getVideos);
 
+videoRouter.get("/cooking", videoController.cooking);
+videoRouter.get("/laundry", videoController.laundry);
+videoRouter.get("/nutrition", videoController.cooking);
+
 videoRouter.post(
 	"/",
 	upload.single("video"),

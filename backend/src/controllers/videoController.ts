@@ -14,6 +14,45 @@ export const getVideos = asyncHandler(async (_, res) => {
 	res.status(200).json(videos);
 });
 
+// @desc Get videos with laundry-related captions
+// @route GET /api/videos/laundry
+// @access Private
+export const laundry = asyncHandler(async (_, res) => {
+	const videos = await Video.find({
+		caption: {
+			$regex: /(laundry|detergent|clothes)/i,
+		},
+	}).exec();
+
+	res.status(200).json(videos);
+});
+
+// @desc Get videos with laundry-related captions
+// @route GET /api/videos/cooking
+// @access Private
+export const cooking = asyncHandler(async (_, res) => {
+	const videos = await Video.find({
+		caption: {
+			$regex: /(cooking|baking|cook|survive)/i,
+		},
+	}).exec();
+
+	res.status(200).json(videos);
+});
+
+// @desc Get videos with laundry-related captions
+// @route GET /api/videos/nutrition
+// @access Private
+export const nutrition = asyncHandler(async (_, res) => {
+	const videos = await Video.find({
+		caption: {
+			$regex: /(nutrition|health|diet|foods)/i,
+		},
+	}).exec();
+
+	res.status(200).json(videos);
+});
+
 // @desc Create new video
 // @route POST /api/videos
 // @access Private
