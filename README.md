@@ -8,7 +8,7 @@ In several countries, life skills like filing taxes, cooking, and doing house ch
 
 ## What it does
 
-1Life combines addictive engagements of popular social media apps(Beli's friend activity sharing and Instagram's navigation tab layout) and learning life skills content to appeal to Gen Z who are used to seeing content in reels. The app also incentivizes users to attract more people to the app by unlocking new perks such as free downloads, private mode, and better video quality when inviting a certain amount of new users. By incorporating social incentives into the platform, 1Life encourages app growth and ongoing user engagement.
+1Life combines addictive engagements of popular social media apps(Beli's friend activity sharing and Instagram's navigation tab layout) and learning life skills content to appeal to Gen Z who are used to seeing content in reels. The app also incentivizes users to attract more people to the app by unlocking new perks that would normally be held behind a subscription or paywall such as privacy mode when inviting a certain amount of new users. By incorporating social incentives into the platform, 1Life encourages app growth and ongoing user engagement.
 
 ## How we built it
 
