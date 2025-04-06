@@ -11,7 +11,7 @@ struct registration2: View {
 
     @State private var selectedOptions: Set<String> = []
 
-    let options = ["Cooking", "Hygiene", "Nutrition", "Other"]
+    let options = ["Cooking", "Hygiene", "Nutrition", "General Life Skills"]
     
     var body: some View {
       ZStack {
@@ -43,7 +43,7 @@ struct registration2: View {
               VStack(spacing: 24) {
                   VStack(spacing: 12) {
                     Text("What do you want to learn?")
-                      .font(Font.custom("Times New Roman", size: 24).weight(.semibold))
+                      .font(Font.custom("Cochin", size: 24).weight(.semibold))
                       .foregroundColor(Color(red: 0.21, green: 0.22, blue: 0.22))
                       .multilineTextAlignment(.center)
                       
@@ -140,8 +140,6 @@ struct registration2: View {
   }
 }
 
-struct registration2_Previews: PreviewProvider {
-  static var previews: some View {
+#Preview {
     registration2()
-  }
 }

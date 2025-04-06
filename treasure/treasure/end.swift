@@ -33,7 +33,7 @@ struct end: View {
         //You're signed up
       VStack(spacing: 12) {
         Text("You’re signed up!")
-          .font(Font.custom("Times New Roman", size: 40).weight(.semibold))
+          .font(Font.custom("Cochin", size: 40).weight(.semibold))
           .lineSpacing(50)
           .foregroundColor(Color(red: 0.21, green: 0.22, blue: 0.22))
       }
@@ -46,8 +46,6 @@ struct end: View {
   }
 }
 
-struct end_Previews: PreviewProvider {
-  static var previews: some View {
+#Preview {
     end()
-  }
 }
