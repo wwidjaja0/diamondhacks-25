@@ -21,10 +21,16 @@ const validateAuthor = body("author")
 	.notEmpty()
 	.withMessage("author is required.");
 
+const validateThumbnailUrl = body("thumbnailUrl")
+	.default("")
+	.isString()
+	.withMessage("thumbnailUrl must be a string.");
+
 export const createVideoValidator = [
 	validateCaption,
 	validateLikeCount,
 	validateAuthor,
+	validateThumbnailUrl,
 ];
 
 export const getVideovalidator = [validateIdParam];
@@ -34,6 +40,7 @@ export const updateVideoValidator = [
 	validateCaption.optional(),
 	validateLikeCount.optional(),
 	validateAuthor.optional(),
+	validateThumbnailUrl.optional(),
 ];
 
 export const deleteVideoValidator = [validateIdParam];

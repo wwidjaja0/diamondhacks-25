@@ -62,7 +62,7 @@ export const createVideo = asyncHandler(async (req, res, next) => {
 		return next(createHttpError(400, validationErrorParser(reqErrors)));
 	}
 
-	const { likeCount, caption, author } = matchedData(req, {
+	const { likeCount, caption, author, thumbnailUrl } = matchedData(req, {
 		locations: ["body"],
 	});
 
@@ -76,6 +76,7 @@ export const createVideo = asyncHandler(async (req, res, next) => {
 		likeCount,
 		caption,
 		author,
+		thumbnailUrl,
 	});
 
 	await newVideo.save();

@@ -10,6 +10,10 @@ const videoSchema = new Schema(
 			type: String,
 			required: true,
 		},
+		thumbnailUrl: {
+			type: String,
+			required: false,
+		},
 		caption: {
 			type: String,
 			required: false,
@@ -22,7 +26,7 @@ const videoSchema = new Schema(
 	{
 		timestamps: true,
 		toJSON: { virtuals: true },
-        toObject: { virtuals: true }
+		toObject: { virtuals: true },
 	}
 );
 
