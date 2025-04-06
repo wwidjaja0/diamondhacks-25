@@ -6,12 +6,17 @@
 	objectVersion = 70;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F4BCF7D72DA2F00D00E57123 /* API-Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BCF7D62DA2F00D00E57123 /* API-Problem.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		F440126E2DA1C63000D12EB9 /* treasure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = treasure.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F440126E2DA1C63000D12EB9 /* 1Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4BCF7D62DA2F00D00E57123 /* API-Problem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API-Problem.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F44012702DA1C63000D12EB9 /* treasure */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = treasure; sourceTree = "<group>"; };
+		F4C2FD212DA30BFB00480545 /* 1Life */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = 1Life; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,7 +33,8 @@
 		F44012652DA1C63000D12EB9 = {
 			isa = PBXGroup;
 			children = (
-				F44012702DA1C63000D12EB9 /* treasure */,
+				F4BCF7D62DA2F00D00E57123 /* API-Problem.swift */,
+				F4C2FD212DA30BFB00480545 /* 1Life */,
 				F440126F2DA1C63000D12EB9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -36,7 +42,7 @@
 		F440126F2DA1C63000D12EB9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F440126E2DA1C63000D12EB9 /* treasure.app */,
+				F440126E2DA1C63000D12EB9 /* 1Life.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -44,9 +50,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F440126D2DA1C63000D12EB9 /* treasure */ = {
+		F440126D2DA1C63000D12EB9 /* 1Life */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F440127C2DA1C63100D12EB9 /* Build configuration list for PBXNativeTarget "treasure" */;
+			buildConfigurationList = F440127C2DA1C63100D12EB9 /* Build configuration list for PBXNativeTarget "1Life" */;
 			buildPhases = (
 				F440126A2DA1C63000D12EB9 /* Sources */,
 				F440126B2DA1C63000D12EB9 /* Frameworks */,
@@ -57,13 +63,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				F44012702DA1C63000D12EB9 /* treasure */,
+				F4C2FD212DA30BFB00480545 /* 1Life */,
 			);
-			name = treasure;
+			name = 1Life;
 			packageProductDependencies = (
 			);
 			productName = treasure;
-			productReference = F440126E2DA1C63000D12EB9 /* treasure.app */;
+			productReference = F440126E2DA1C63000D12EB9 /* 1Life.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -81,7 +87,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F44012692DA1C63000D12EB9 /* Build configuration list for PBXProject "treasure" */;
+			buildConfigurationList = F44012692DA1C63000D12EB9 /* Build configuration list for PBXProject "1Life" */;
 			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -94,7 +100,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F440126D2DA1C63000D12EB9 /* treasure */,
+				F440126D2DA1C63000D12EB9 /* 1Life */,
 			);
 		};
 /* End PBXProject section */
@@ -114,6 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4BCF7D72DA2F00D00E57123 /* API-Problem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +253,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"treasure/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"1Life/Preview Content\"";
 				DEVELOPMENT_TEAM = FB4R82Y4GP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -254,13 +261,15 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = l.treasure;
+				PRODUCT_BUNDLE_IDENTIFIER = l.1Life;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -275,7 +284,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"treasure/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"1Life/Preview Content\"";
 				DEVELOPMENT_TEAM = FB4R82Y4GP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -283,13 +292,15 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = l.treasure;
+				PRODUCT_BUNDLE_IDENTIFIER = l.1Life;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -300,7 +311,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F44012692DA1C63000D12EB9 /* Build configuration list for PBXProject "treasure" */ = {
+		F44012692DA1C63000D12EB9 /* Build configuration list for PBXProject "1Life" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F440127A2DA1C63100D12EB9 /* Debug */,
@@ -309,7 +320,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F440127C2DA1C63100D12EB9 /* Build configuration list for PBXNativeTarget "treasure" */ = {
+		F440127C2DA1C63100D12EB9 /* Build configuration list for PBXNativeTarget "1Life" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F440127D2DA1C63100D12EB9 /* Debug */,

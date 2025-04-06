@@ -41,6 +41,7 @@ class MyViewManager: NSObject, ObservableObject {
         InterfaceAPI.getVideoMixes(completion: { data in
             guard let data = data else { return }
             videoMix = Array(data.dropFirst(2))
+            self.currentVids = videoMix
         })
         InterfaceAPI.getVideoMixByCat(cat: "cooking", completion: { data in
             guard let data = data else { return }
@@ -52,7 +53,7 @@ class MyViewManager: NSObject, ObservableObject {
         DispatchQueue.main.async {
             self.lastPage = from
             if from == "Home" {
-                self.currentVids = videoMix.shuffled()
+                self.currentVids = videoMix
             }
             else if from == "Search" {
                 self.currentVids = cookingVids.shuffled()

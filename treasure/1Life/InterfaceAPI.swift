@@ -18,12 +18,13 @@ struct VideoMetaData: Decodable {
     let createdAt: String
     let updatedAt: String
     let __v: Int
+    let thumbnailUrl: String
     let video: String
     let id: String
 
     // Use CodingKeys to match the JSON keys to the struct properties
     enum CodingKeys: String, CodingKey {
-        case _id, videoKey, likeCount, caption, author, createdAt, updatedAt, __v, video, id
+        case _id, videoKey, likeCount, caption, author, createdAt, updatedAt, __v, thumbnailUrl, video, id
     }
     
     func makeURL() -> URL? {

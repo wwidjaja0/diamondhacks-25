@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct HomePage: View {
-    
+    let topVideos: [VideoMetaData]
     @State private var selectedTab: Tab = .home // Track the selected tab
     
     enum Tab {
@@ -63,11 +63,9 @@ struct HomePage: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 16) {
-                            ContentCard(title: "Sautéed Salmon", username: "user123_")
-                            ContentCard(title: "Banana Pancakes", username: "user_iLovePancakes")
-                            ContentCard(title: "Raspberry Shortcake", username: "lolidkwhattoputhere")
-                            ContentCard(title: "Chuck 70 Hi Sneakers", username: "Converse")
-                            ContentCard(title: "good kid, m.A.A.d city", username: "Kendrick Lamar")
+                            ForEach(0..<5, id: \.self) { index in
+                                ContentCard(title: topVideos[index].caption, username: topVideos[index].author, imgURL: topVideos[index].thumbnailUrl)
+                            }
                         }
                         .padding(.horizontal)
                     }
@@ -203,6 +201,7 @@ struct HomePage: View {
 struct ContentCard: View {
     var title: String
     var username: String
+    var imgURL: String
     
     var body: some View {
         ZStack {
@@ -210,6 +209,15 @@ struct ContentCard: View {
                 ViewManager.startDoomScrolling(from: "Home")
             }) {
                 VStack(alignment: .leading, spacing: 8) {
+                    AsyncImage(url: URL(string: imgURL)) { image in image
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 120, height: 120)
+                    } placeholder: {
+                            Color.gray
+                            .frame(width: 120, height: 120)
+                    }
+                    .padding(.top, 50)
                     Spacer()
                     VStack(alignment: .leading, spacing: 4) {
                         Text(title)
@@ -292,8 +300,8 @@ struct FriendsActivity: View {
 
 
 // MARK: - Preview Provider
-#Preview {
+/*#Preview {
     HomePage()
 }
-
+*/
 

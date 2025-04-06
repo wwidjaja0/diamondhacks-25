@@ -29,7 +29,7 @@ struct ContentView: View {
         else {
             if !manageView.doomScrolling {
                 if manageView.lastPage == "" || manageView.lastPage == "Home" {
-                    HomePage()
+                    HomePage(topVideos: ViewManager.currentVids)
                 }
                 else if manageView.lastPage == "Search" {
                     Search()
